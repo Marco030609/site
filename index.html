@@ -1,0 +1,60 @@
+<section data-bs-version="5.1" class="menu menu1 structurem5" group="Menu" plugins="DropDown, TouchSwipe" always-top="" global="" once="menu" not-draggable="" position-absolute="">
+    <mbr-parameters>
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Border" name="showBorder" checked>
+        <input type="color" title="Border Color" name="borderColor" value="#ABBBFF" condition="showBorder">
+        <input type="checkbox" title="Logo" name="showLogo" checked>
+        <input type="range" title="Logo Size" inline name="logoSize" min="3" max="8" step="0.1" value="3" condition="showLogo">
+        <input type="checkbox" title="Brand Name" name="showBrand" checked>
+        <input type="checkbox" title="Menu Items" name="showItems" checked>
+        <input type="checkbox" title="Button" name="showButtons" checked>
+        <header>Styles</header>
+        <input type="checkbox" title="Sticky" name="sticky">
+        <input type="checkbox" title="Collapsed" name="collapsed">
+        <input type="checkbox" title="Transparent" name="transparent">
+        <input type="range" title="Opacity" name="opacity" min="0" max="1" step="0.1" value="0.2" condition="transparent">
+        <input type="color" title="Color" name="menuBgColor" value="#120E23">
+        <input type="color" title="Hamburger" name="hamburgerColor" value="#FFFFFF">
+    </mbr-parameters>
+
+    <nav class="navbar navbar-dropdown" mbr-class="{'navbar-fixed-top':sticky,
+                     'navbar-expand-lg':!collapsed,
+                     'collapsed':collapsed}">
+        <div class="container-fluid">
+            <div class="main-container">
+                <div class="navbar-brand">
+                    <span mbr-if="showLogo" class="navbar-logo">
+                        <a href="https://mobiri.se">
+                            <img src="https://r.mobirisesite.com/1494624/assets/images/photo-1524995997946-a1c2e315a42f.jpeg" alt="Mobirise Website Builder" mbr-style="{'height': logoSize + 'rem'}">
+                        </a>
+                    </span>
+                    <span mbr-if="showBrand" mbr-buttons="" mbr-theme-style="display-7" class="navbar-caption-wrap" data-toolbar="-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-iconFont"><a class="navbar-caption" data-app-selector=".navbar-caption" href="https://mobiri.se" data-app-placeholder="Type Text">TJF</a></span>
+                </div>
+                <div mbr-if="showButtons" mbr-buttons="" mbr-theme-style="display-7" class="navbar-buttons mbr-section-btn" data-toolbar="-mbrBtnMove, -mbrBtnRemove, -mbrBtnAdd">
+                    <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Apoio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" mbr-if="showItems || showIcons ">
+                    <ul mbr-menu="" class="navbar-nav nav-dropdown" mbr-theme-style="display-7" mbr-if="showItems" mbr-class="{'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}">
+                        <li class="nav-item">
+                            <a class="nav-link link" href="https://mobiri.se" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="https://mobiri.se" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="https://mobiri.se" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Cursos</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" mbr-if="showItems || showIcons">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+</section>
